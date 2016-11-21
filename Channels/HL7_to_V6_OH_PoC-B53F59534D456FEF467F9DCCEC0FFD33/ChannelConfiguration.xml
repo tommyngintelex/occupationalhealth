@@ -1,0 +1,36 @@
+<channel
+   name="HL7 to V6 OH PoC"
+   guid="B53F59534D456FEF467F9DCCEC0FFD33"
+   description=""
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_mapper
+      guid="HL7_to_V6_OH_PoC-To-TWlHkpXIaKhzn8"
+      commit_id="c0bae67c6cd7d00c188a177bc8b77d47391856ac"
+      commit_comment="encode URL query using filter.uri.enc()">
+      <dequeue_list>
+         <dequeue
+            source_name="self"
+            dequeue_guid="8B22F15A4856F48A849E1DF8A11FBB92"/>
+      </dequeue_list>
+   </to_mapper>
+   <from_file
+      file_type="HL7"
+      prepend_file_info="false"
+      eof_char=""
+      poll_time="10000"
+      max_message_size="15728640"
+      source_dir="E:/MedDevice/HL7Data/"
+      source_file_extension="txt"
+      archive_processed_files="true"
+      processed_dir="E:/MedDevice/Success/"
+      error_dir="E:/MedDevice/Error/"
+      ignored_segments=""
+      segment_delimiter="0x0D"
+      message_delimiter="0x0A"
+      minimum_file_age="0"
+      escape_8bit="false"
+      escape_char=" "
+      sftp_authentication_method="user_password"/>
+</channel>
