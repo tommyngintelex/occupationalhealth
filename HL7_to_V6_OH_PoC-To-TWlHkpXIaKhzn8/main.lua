@@ -41,7 +41,7 @@ function main(Data)
    -- (5) Retrieve V6 lab test record
    local LabTest = getRecord(
       "OH_LabTestObject", 
-      filter.uri.enc("$filter=HR/HealthNumber eq '"..HealthNo.."' and RecordNo eq "..LabId), 
+      "$filter=HR/HealthNumber%20eq%20'"..HealthNo.."'%20and%20RecordNo%20eq%20"..LabId, 
       "$select=Id")
    --trace(LabTest)
 
@@ -55,7 +55,7 @@ function main(Data)
    -- (7) Retrieve V6 lab test panel record
    local LabTestPanel = getRecord(
       "OH_LabTestPanelObject", 
-      filter.uri.enc("$filter=Name eq '"..PanelName.."'"), 
+      "$filter=Name%20eq%20'"..PanelName.."'", 
       "$expand=LabTests($select=Id,Code)&$select=Id")
    trace (LabTestPanel)
 

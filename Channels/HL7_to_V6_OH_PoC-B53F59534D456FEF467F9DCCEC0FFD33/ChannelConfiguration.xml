@@ -7,8 +7,8 @@
    use_message_filter="false">
    <to_mapper
       guid="HL7_to_V6_OH_PoC-To-TWlHkpXIaKhzn8"
-      commit_id="c0bae67c6cd7d00c188a177bc8b77d47391856ac"
-      commit_comment="encode URL query using filter.uri.enc()">
+      commit_id="eaa7d777cbb7e0bd44c220c782741bf53cc35586"
+      commit_comment="removed filter.uri.enc() - does not work well with API">
       <dequeue_list>
          <dequeue
             source_name="self"
